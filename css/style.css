@@ -1,0 +1,38 @@
+.sl-bx {
+	width: 200px;
+	position: relative;
+}
+.sl-bx select {
+	width: 100%;
+	height: 28px;
+	border: 1px solid #ddd;
+	padding: 0 5px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+}
+.sl-bx::after{
+	position: absolute;
+	content: "";
+	top: 10px;
+	right: 8px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 3px 0 3px;
+	border-color: #292929 transparent transparent 
+}
+/*===== IE Hack ======*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { /* ie10, ie11+ */
+.sl-bx::after {
+	display: none;
+}
+}
+/*===== IE Hack End ======*/
+/*===== Mozila outline remove =====*/
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+/*===== Mozila outline remove End =====*/

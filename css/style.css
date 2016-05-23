@@ -29,6 +29,12 @@
 	display: none;
 }
 }
+/* IE8/9 */
+@media screen\0 {
+    .sl-bx::after {
+    display: none;
+  }
+}
 /*===== IE Hack End ======*/
 /*===== Mozila outline remove =====*/
 select:-moz-focusring {
